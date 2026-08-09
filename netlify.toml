@@ -1,0 +1,11 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Single-page app: send every route to index.html so client-side routing
+# (and plain refreshes) don't 404. This app is a single page, but this is
+# good practice regardless.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
